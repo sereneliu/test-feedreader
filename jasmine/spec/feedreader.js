@@ -74,23 +74,23 @@ $(function() {
          * a single .entry element within the .feed container.
          */
         it('at least 1 entry', function() {
-            expect($('.feed').has('.entry')).not.toBe(0);
+            expect($('.feed').has('.entry').length).not.toBe(0);
         });
     });
     /* This test suite is all about feed selection. */
     describe('New Feed Selection', function() {
+        var oldFeed = null;
         beforeEach(function(done) {
-            /* A random tag is added to an entry to test whether
-             * it disappears after calling loadFeed. 
-             */
-            $('.entry').addClass('old');
-            loadFeed(0, done);
+            loadFeed(0, function() {
+                oldFeed = $('.feed').html();
+                loadFeed(0, done);
+            });
         });
         /* This test ensures that when a new feed is loaded,
          * the content actually changes. 
          */
          it('content changes', function() {
-             expect($('.entry').hasClass('old')).toBe(false);
+             expect($('.feed').html()).not.toEqual(oldFeed);
          });
     });
 }());
