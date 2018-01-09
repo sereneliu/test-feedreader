@@ -19,7 +19,7 @@ This will help me because:
 
 ## Run
 
-Click here to see the project and the tests below. If you prefer to run this locally, download the entire folder and open `index.html`.
+Click [here](https://sereneliu.github.io/test-feedreader/) to see the project and the tests below. If you prefer to run this locally, download the entire folder and open `index.html`.
 
 ## References
 
