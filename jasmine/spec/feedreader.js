@@ -73,7 +73,7 @@ $(function() {
          * a single .entry element within the .feed container.
          */
         it('at least 1 entry', function() {
-            expect($('.feed').has('.entry').length).not.toBe(0);
+            expect($('.feed .entry').length).not.toBe(0);
         });
     });
     /* This test suite is all about feed selection. */
