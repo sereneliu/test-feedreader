@@ -83,7 +83,7 @@ $(function() {
         beforeEach(function(done) {
             loadFeed(0, function() {
                 oldFeed = $('.feed').html();
-                loadFeed(0, done);
+                loadFeed(1, done);
             });
         });
         /* This test ensures that when a new feed is loaded,
